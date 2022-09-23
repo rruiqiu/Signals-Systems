@@ -1,0 +1,18 @@
+clc
+clear
+opts = detectImportOptions('course_grades_2022.xlsx');
+opts = setvartype(opts, {'ID_Number', 'Name'}, 'string');
+table = readtable('course_grades_2022.xlsx', opts);
+
+H = height(table); %get the total rows of table
+
+function [name,totalmark] = getMaximumLabName()
+Lab1mark = table{2:H,"Lab"+wildcardPattern};
+S = sum(Lab1mark,2); %the sum of each row
+fprintf("%d\n",S)
+[M,I] = max(S);
+totalmark = M;
+maxlabnameIndex = I+1;
+name = table.Name(maxlabnameIndex);
+end
+
