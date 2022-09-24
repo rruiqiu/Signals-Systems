@@ -12,4 +12,3 @@ imshow(reconstructed_image);
 
 %writing files
 imwrite(reconstructed_image, 'my_fixed_image.jpg');
-%testing
