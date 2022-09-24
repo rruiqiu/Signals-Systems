@@ -10,4 +10,4 @@ reconstructed_image=cat(3,red,green,blue);
 imshow(reconstructed_image);
 
 %
-% imwrite(reconstructed_image, 'my_fixed_image.jpg');
+imwrite(reconstructed_image, 'my_fixed_image.jpg');
