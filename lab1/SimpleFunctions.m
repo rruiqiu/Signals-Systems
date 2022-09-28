@@ -67,4 +67,3 @@ classdef SimpleFunctions
       
 end
 
-
