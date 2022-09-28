@@ -1,4 +1,4 @@
-t = (-10:0.1:10);
+t = (-10:10);
 % 0.1 is used to increase the sampling frequency
 f = SimpleFunctions();
 a = f.unitstep(t);
