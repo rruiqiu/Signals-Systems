@@ -6,3 +6,5 @@ b = 2 .* f.unitstep(t-1);
 c = f.unitstep(t-4);
 d = a - b + c;
 stem(t, d, 'LineWidth', 1);
+
+%test
