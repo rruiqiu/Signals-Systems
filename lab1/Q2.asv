@@ -7,17 +7,16 @@ table = readtable('course_grades_2022.xlsx', opts);
 H = height(table); %get the total rows of table
 %a
 [labname,labtotalmark]=getMaximumLabName(table,H);
-fprintf('%s get the highest lab mark, the total mark is %d.\n',labname,labtotalmark);
+fprintf('%s get the highest labmark, his total mark is %d.\n',labname,labtotalmark);
 %b
 [examname,examtotalmark]=getMaximumExamName(table,H);
-fprintf('%s get the highest exam mark, the total mark is %d.\n',examname,examtotalmark);
+fprintf('%s get the highest exammark, his total mark is %d.\n',examname,examtotalmark);
 %c
 [finalname,finaltotalmark]=getMaximumFinalName(table,H);
-fprintf('%s get the highest fintal total mark, the total mark is %d.\n',finalname,finaltotalmark);
+fprintf('%s get the highest fintaltotalmark, his total mark is %d.\n',examname,examtotalmark);
 %d
 cellPatients = {'Rui Qiu','400318681',10,10,10,10,10,10,10,10,10;
                 'Shabab Rahman','400291441',10,10,10,10,10,10,10,10,10};
-disp(cellPatients)
 table = [table;cellPatients];
 
 % a

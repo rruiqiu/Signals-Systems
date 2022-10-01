@@ -1,8 +1,8 @@
 clear
 img = imread('ee3tp3picture2022.jpg');
 
-red= 5.* img(:,:,1);
-green= 5. * img(:,:,2);
+red= 5.* img(:,:,1); %multiply the scaling factor of the first dimension
+green= 5. * img(:,:,2); %multiply the scaling factor of the second dimension
 %don't need to change
 blue=img(:,:,3);
 
