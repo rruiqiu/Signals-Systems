@@ -9,11 +9,11 @@ f = SimpleFunctions();
 n = 0:5;
 
 x = f.unitstep(n) - f.unitstep(n-3);
-h = f.unitstep(n) - f.unitstep(n-4);
-% x and h have the same length.
+v = f.unitstep(n) - f.unitstep(n-4);
+% x and v have the same length.
 
 % Create a correct discrete time vector.
-zs_output = conv(x, h);
+zs_output = conv(x, v);
 disp(zs_output)
 
 time_axis = [0 length(zs_output)-1];
@@ -29,10 +29,10 @@ axis([time_axis 0 max(x)+1])
 grid on;
 
 subplot(3, 1, 2)
-stem(n, h)
+stem(n, v)
 xlabel("n")
-ylabel("h")
-axis([time_axis 0 max(h)+1])
+ylabel("v")
+axis([time_axis 0 max(v)+1])
 grid on;
 
 subplot(3, 1, 3)
@@ -41,3 +41,5 @@ xlabel("n")
 ylabel("zs\_output")
 axis([time_axis 0 max(zs_output)+2])
 grid on;
+
+exportgraphics(gcf, 'Q1a.jpg');
