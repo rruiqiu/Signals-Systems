@@ -9,7 +9,7 @@ f = SimpleFunctions();
 n = 0:5;
 
 x = 2*f.delta(n)+f.delta(n-1);
-v = f.delta(n)+2 .* f.delta(n-1);
+v = f.delta(n-1)+2 .* f.delta(n-2);
 % x and v have the same length.
 
 % Create a correct discrete time vector.

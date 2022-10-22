@@ -7,11 +7,11 @@ clc
 % t = (0:L-1)*T;       % Time vector in seconds.
 
 
-Te = 8e-3;              % echo delayed in sec
+Te = 20e-3;              % echo delayed in sec
 delayed_space=round(Te*Fs);   % Delayed sample spaces
 
 
-amp = 0.4;               % amplitude
+amp = 1;               % amplitude
 % delayes_space + 1 is to match the correct timing convolution
 h = zeros(1,delayed_space+1);    % create the spaces of the extra delayed samples
 h(delayed_space+1) = amp;        % set the Impulse Response of the delayed signal for convolution with the amplitude

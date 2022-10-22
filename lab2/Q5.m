@@ -23,4 +23,4 @@ signal_newspace(1:length(signal)) = signal; % padding the original signal into t
 
 signalplusecho = signal_newspace + dealyed_signal; % adding both signals
 
-audiowrite('convolution.wav', signalplusecho, Fs);
+audiowrite('Q5.wav', signalplusecho, Fs);

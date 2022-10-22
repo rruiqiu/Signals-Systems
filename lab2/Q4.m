@@ -10,7 +10,7 @@ t = (0:L-1)*T;       % Time vector in seconds.
 Te = 0.8;          %echo delayed in msec
 amp = 0.4;
 signalplusecho = echo_gen(signal,Fs,Te,amp);
-audiowrite('speechwithecho.wav', signalplusecho, Fs);
+audiowrite('Q4.wav', signalplusecho, Fs);
 
 function signalplusecho = echo_gen(signal,Fs,delay,amp)
     T = 1/Fs;       % Sampling period in seconds.
@@ -27,6 +27,3 @@ function signalplusecho = echo_gen(signal,Fs,delay,amp)
         signalplusecho = signalplusecho/max(abs(signalplusecho));
     end
 end
-
-
-% ref = https://www.mathworks.com/matlabcentral/answers/471598-generate-echo-to-an-audio
