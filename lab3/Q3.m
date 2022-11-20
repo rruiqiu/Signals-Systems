@@ -2,10 +2,10 @@ clc;
 clear;
 
 % Use sinusoid frequency f = 300 Hz
-f = [7200,7600,7800,7900];
+f = [7200,7600,7800,7900,8000];
 %
 % Sampling frequency and interval
-fs = 8000;
+fs = 17000;
 Ts = 1/fs;
 %
 % Set time duration of plot, i.e., 10 msec.
@@ -25,10 +25,10 @@ set(gcf, 'Position',  [400, 140, 1200, 800]);
 %
 C = [];
 % Make the plot
-for i = 1:4
+for i = 1:5
     % Sample the sinusoid.
     xnT = sin(2*pi*f(1,i)*nsound);
-    subplot(2,2,i);
+    subplot(5,2,i);
     plot(nplot, xnT(1:length(nplot)));
     title("Subplot"+i+ ":"+" "+f(1,i)+"Hz");
     C = cat(2,C,xnT);

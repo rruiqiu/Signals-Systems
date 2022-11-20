@@ -1,7 +1,7 @@
 clc;
 clear;
 f = 100; %f1
-u=2000;    %miu
+u=500;    %miu
 fs = 8000; %sampling frequency
 Ts = 1/fs;
 % Make the time vector for the 2000 samples plot

@@ -19,7 +19,6 @@ nplot=0:Ts:tfinalplot;
 tfinal = 2;
 nsound=0:Ts:tfinal;
 %
-
 set(gcf, 'Position',  [400, 140, 1200, 800]);
 %
 C = [];
@@ -30,19 +29,11 @@ for i = 1:4
     subplot(2,2,i);
     plot(nplot, xnT(1:length(nplot)));
     title("Subplot"+i+ ":"+" "+f(1,i)+"Hz");
-    C = cat(2,C,xnT);
+    C = cat(2,C,xnT); %concatenate four xnT
     audiowrite(string(f(1,i))+' Hz.wav', xnT, fs);
 end
+exportgraphics(gcf, 'Q2.jpg');
 
 audiowrite('concatenate Hz.wav', C, fs);
 
 
-
-
-%
-% Save xnT as a wav sound file, soundfile.wav.
-% 
-%
-% Uncomment/edit this next line to save the graph.
-% exportgraphics(gcf, ’filename_you_want.jpg’);
-%

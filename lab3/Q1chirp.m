@@ -17,5 +17,4 @@ plot(nplot, cT(1:length(nplot)));
 
 % Save xnT as a wav sound file, soundfile.wav.
 audiowrite('chirpsoundfile.wav', cT, fs);
-exportgraphics(gcf, 'chirpsoundfile.jpg');
-%
+exportgraphics(gcf, 'Q1chrip.jpg');
