@@ -2,7 +2,7 @@ clc;
 clear;
 f = 100; %f1
 u=2000;    %miu
-fs = 8000; %sampling frequency
+fs = 16000; %sampling frequency
 Ts = 1/fs;
 % Make the time vector for the 2000 samples plot
 nplot=0:Ts:Ts*1999;
@@ -16,8 +16,8 @@ cT = cos(pi*u*(nsound.^2)+2*pi*f*nsound);
 plot(nplot, cT(1:length(nplot)));
 ylabel("c(t)");
 xlabel("t");
-title("Rui Qiu, Shaba Rahman, 8KHz");
+title("Rui Qiu, Shaba Rahman, 16KHz");
 % Save xnT as a wav sound file, soundfile.wav.
-audiowrite('8khzchirpsoundfile.wav', cT, fs);
-exportgraphics(gcf, '8khzchirpsoundfile.jpg');
+audiowrite('16khzchirpsoundfile.wav', cT, fs);
+exportgraphics(gcf, '16khzchirpsoundfile.jpg');
 %

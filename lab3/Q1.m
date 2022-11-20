@@ -15,9 +15,15 @@ nplot=0:Ts:tfinalplot;
 %
 % Sample the sinusoid.
 xnT = sin(2*pi*f*nplot);
+
+
 %
 % Make the plot
 stem(nplot, xnT);
+%axis([0 0.01 -1.1 1.1]);
+ylabel("X(nTs)");
+xlabel("t");
+title("Rui Qiu, Shaba Rahman");
 %
 % Uncomment/edit this next line to save the graph.
 exportgraphics(gcf, 'Q1.jpg');

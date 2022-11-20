@@ -14,6 +14,9 @@ nsound=0:Ts:tfinal;
 cT = cos(pi*u*(nsound.^2)+2*pi*f*nsound);
 % Make the plot
 plot(nplot, cT(1:length(nplot)));
+ylabel("c(t)");
+xlabel("t");
+title("Rui Qiu, Shaba Rahman");
 
 % Save xnT as a wav sound file, soundfile.wav.
 audiowrite('chirpsoundfile.wav', cT, fs);

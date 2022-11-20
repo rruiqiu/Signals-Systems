@@ -28,6 +28,8 @@ for i = 1:4
     xnT = sin(2*pi*f(1,i)*nsound);
     subplot(2,2,i);
     plot(nplot, xnT(1:length(nplot)));
+    xlabel("t");
+    ylabel("xnT");
     title("Subplot"+i+ ":"+" "+f(1,i)+"Hz");
     C = cat(2,C,xnT); %concatenate four xnT
     audiowrite(string(f(1,i))+' Hz.wav', xnT, fs);

@@ -2,10 +2,10 @@ clc;
 clear;
 
 % Use sinusoid frequency f = 300 Hz
-f = [7200,7600,7800,7900,8000];
+f = [7200,7600,7800,7900];
 %
 % Sampling frequency and interval
-fs = 17000;
+fs = 8000;
 Ts = 1/fs;
 %
 % Set time duration of plot, i.e., 10 msec.
@@ -25,16 +25,18 @@ set(gcf, 'Position',  [400, 140, 1200, 800]);
 %
 C = [];
 % Make the plot
-for i = 1:5
+for i = 1:4
     % Sample the sinusoid.
     xnT = sin(2*pi*f(1,i)*nsound);
-    subplot(5,2,i);
+    subplot(2,2,i);
     plot(nplot, xnT(1:length(nplot)));
     title("Subplot"+i+ ":"+" "+f(1,i)+"Hz");
+    xlabel("t");
+    ylabel("xnT");
     C = cat(2,C,xnT);
     audiowrite(string(f(1,i))+' Hz.wav', xnT, fs);
 end
-
+exportgraphics(gcf, 'Q3.jpg');
 audiowrite('Q3concatenate Hz.wav', C, fs);
 
 
@@ -45,5 +47,5 @@ audiowrite('Q3concatenate Hz.wav', C, fs);
 % 
 %
 % Uncomment/edit this next line to save the graph.
-% exportgraphics(gcf, ’filename_you_want.jpg’);
+
 %
